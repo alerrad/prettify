@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "styling.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./media/logo512.png">
+    <title>Prettify</title>
+</head>
+<body>
+    <noscript>You need to enable javascript, to use this app!</noscript>
+    <div class = "container">
+        <h1 class = "logo">Prettify</h1>
+        <p class = "slogan">Manage your folder in several clicks!</p>
+        <form action = "" id = "main_form" class = "flexbox">
+            <input type = "text" id = "path" placeholder = "Folder path" required/>
+            <input type = "text" id = "subname" placeholder = "Subname to remove" required/>
+            <input type = "text" id = "prefx" placeholder = "Add prefix (optional)"/>
+            <textarea placeholder = "Skip files (each name on new line)" id = "skiplist"></textarea>
+            <button class = "submition">start</button>
+        </form>
+        <p class = "copyright">Made by <a href = "https://github.com/alerrad" target="_blank">Alerrad</a></p>
+    </div>
+    <div class = "toggler" id = "modal_back"></div>
+    <div class = "modal" id = "modal">
+        <h2 id = "modal_title">Done!</h2>
+        <br/><b>Stats:</b><br/>
+        <ul id = "stats">
+            <li>Renamed files: <b id = "total_res">0</b></li>
+            <li>Prefixed: <b id = "prefx_res">0</b></li>
+            <li>Skipped: <b id = "skips_res">0</b></li>
+            <li>Status: <b>ok</b></li>
+        </ul>
+        <button id = "modalbutton" class = "toggler submition">ok</button>
+    </div>
+</body>
+<script type = "text/javascript" src = "/eel.js"></script>
+<script src = "main.js" type = "text/javascript"></script>
+</html>
